@@ -13,12 +13,14 @@ class PhotosListsViewModel {
     // MARK: - Properties
     
     var isLoading:Observable<Bool> = Observable(false)
+    var cellDataSource:Observable<[PhotoCellViewModel]> = Observable(nil)
     
+    var dataSource = [PhotosModel]()
     
     // MARK: - Public methods
     
     func numberOfItemsInSection() -> Int {
-        return 0
+        return dataSource.count
     }
     
     
@@ -35,10 +37,17 @@ class PhotosListsViewModel {
             self?.isLoading.value = false
             switch results {
             case .success(let data):
+                self?.dataSource = data
+                self?.mapCellData()
                 print(data)
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    //mapping all photosModel objects inside dataSource to my PhotoCellViewModel.
+    func mapCellData(){
+        self.cellDataSource.value = self.dataSource.compactMap({PhotoCellViewModel(photosModel: $0)})
     }
 }
