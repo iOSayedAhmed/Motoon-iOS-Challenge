@@ -19,6 +19,8 @@
 		C80613F129D43E6200604118 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80613F029D43E6200604118 /* PhotoCellViewModel.swift */; };
 		C80613F529D443C100604118 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80613F429D443C100604118 /* PhotosModel.swift */; };
 		C80613F729D4448100604118 /* URLSession + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80613F629D4448100604118 /* URLSession + Extensions.swift */; };
+		C85B914629D4D627005DB199 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914529D4D627005DB199 /* NetworkConstants.swift */; };
+		C85B914929D4D897005DB199 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914829D4D897005DB199 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C80613F029D43E6200604118 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 		C80613F429D443C100604118 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		C80613F629D4448100604118 /* URLSession + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + Extensions.swift"; sourceTree = "<group>"; };
+		C85B914529D4D627005DB199 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		C85B914829D4D897005DB199 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				C80613E729D42FA800604118 /* Core */,
-				C80613E329D42F6000604118 /* Resources */,
 				C80613E229D42F2C00604118 /* Extensions */,
+				C80613E329D42F6000604118 /* Resources */,
 				C80613E529D42F8300604118 /* Networking */,
+				C85B914729D4D874005DB199 /* Classes */,
 				C80613E429D42F6C00604118 /* Storyboards */,
 				C80613E629D42F9300604118 /* Controllers */,
 				C80613E129D42F1F00604118 /* Models */,
@@ -135,6 +140,7 @@
 		C80613E529D42F8300604118 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C85B914529D4D627005DB199 /* NetworkConstants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -187,6 +193,14 @@
 				C80613EE29D43BB600604118 /* PhotosListsViewModel.swift */,
 			);
 			path = PhotosListViewModel;
+			sourceTree = "<group>";
+		};
+		C85B914729D4D874005DB199 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C85B914829D4D897005DB199 /* Observable.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02948DF229CFC76D00F82F28 /* PhotosListVC.swift in Sources */,
+				C85B914629D4D627005DB199 /* NetworkConstants.swift in Sources */,
 				C80613F129D43E6200604118 /* PhotoCellViewModel.swift in Sources */,
 				C80613F529D443C100604118 /* PhotosModel.swift in Sources */,
 				C80613EF29D43BB600604118 /* PhotosListsViewModel.swift in Sources */,
@@ -269,6 +284,7 @@
 				02948DEE29CFC76D00F82F28 /* AppDelegate.swift in Sources */,
 				C80613ED29D43AA800604118 /* PhotosListVC + Extensions.swift in Sources */,
 				02948DF029CFC76D00F82F28 /* SceneDelegate.swift in Sources */,
+				C85B914929D4D897005DB199 /* Observable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
