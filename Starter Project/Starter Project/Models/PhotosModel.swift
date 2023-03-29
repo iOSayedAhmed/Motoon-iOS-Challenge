@@ -9,7 +9,6 @@ import Foundation
 // MARK: - PhotosModel
 struct PhotosModel: Codable {
     let id: String
-    let createdAt, updatedAt: Date
     let width, height: Int
     let color: String
     let urls: Urls
@@ -17,8 +16,6 @@ struct PhotosModel: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
         case width, height, color
         case urls
     }
