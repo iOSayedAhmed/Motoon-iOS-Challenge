@@ -53,17 +53,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="o9f-oN-dVQ">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="o9f-oN-dVQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="101-gB-FA2"/>
                             <constraint firstItem="eVg-ur-xNP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OCe-hC-eqW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eVg-ur-xNP" secondAttribute="bottom" id="U4o-6Q-bfA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVg-ur-xNP" secondAttribute="trailing" id="Zcn-r4-BZ8"/>
                             <constraint firstItem="eVg-ur-xNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oHa-0d-gw0"/>
+                            <constraint firstItem="o9f-oN-dVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w5I-wU-eSF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndecator" destination="o9f-oN-dVQ" id="qEW-MQ-eD6"/>
                         <outlet property="collectionView" destination="eVg-ur-xNP" id="cNH-FA-B7z"/>
                     </connections>
                 </viewController>
