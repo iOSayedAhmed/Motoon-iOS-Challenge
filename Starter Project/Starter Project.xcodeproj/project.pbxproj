@@ -21,6 +21,7 @@
 		C80613F729D4448100604118 /* URLSession + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80613F629D4448100604118 /* URLSession + Extensions.swift */; };
 		C85B914629D4D627005DB199 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914529D4D627005DB199 /* NetworkConstants.swift */; };
 		C85B914929D4D897005DB199 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914829D4D897005DB199 /* Observable.swift */; };
+		C85B914B29D4E348005DB199 /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914A29D4E348005DB199 /* UIImageView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C80613F629D4448100604118 /* URLSession + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + Extensions.swift"; sourceTree = "<group>"; };
 		C85B914529D4D627005DB199 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		C85B914829D4D897005DB199 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C85B914A29D4E348005DB199 /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C80613F629D4448100604118 /* URLSession + Extensions.swift */,
+				C85B914A29D4E348005DB199 /* UIImageView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				C80613EA29D4394800604118 /* photoCollectionViewCell.swift in Sources */,
 				02948DEE29CFC76D00F82F28 /* AppDelegate.swift in Sources */,
 				C80613ED29D43AA800604118 /* PhotosListVC + Extensions.swift in Sources */,
+				C85B914B29D4E348005DB199 /* UIImageView + Extensions.swift in Sources */,
 				02948DF029CFC76D00F82F28 /* SceneDelegate.swift in Sources */,
 				C85B914929D4D897005DB199 /* Observable.swift in Sources */,
 			);
