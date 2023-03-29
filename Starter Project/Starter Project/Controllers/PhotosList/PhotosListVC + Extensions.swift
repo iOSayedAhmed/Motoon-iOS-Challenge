@@ -18,7 +18,15 @@ extension PhotosListVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        
+    }
+    func customizeNavigationController(){
+        // customize Navigation Bar.
+        navigationController?.navigationBar.isTranslucent = false
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemBackground
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        self.navigationController?.navigationBar.standardAppearance = appearance
     }
     
     //reload CollectionView
