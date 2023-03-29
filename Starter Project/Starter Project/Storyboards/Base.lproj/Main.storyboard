@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-ur-xNP">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <rect key="frame" x="8" y="47" width="374" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A16-bW-nf2">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A16-bW-nf2">
                                     <size key="itemSize" width="141" height="141"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -61,9 +61,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="o9f-oN-dVQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="101-gB-FA2"/>
-                            <constraint firstItem="eVg-ur-xNP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OCe-hC-eqW"/>
+                            <constraint firstItem="eVg-ur-xNP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="OCe-hC-eqW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eVg-ur-xNP" secondAttribute="bottom" id="U4o-6Q-bfA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVg-ur-xNP" secondAttribute="trailing" id="Zcn-r4-BZ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVg-ur-xNP" secondAttribute="trailing" constant="8" id="Zcn-r4-BZ8"/>
                             <constraint firstItem="eVg-ur-xNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oHa-0d-gw0"/>
                             <constraint firstItem="o9f-oN-dVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w5I-wU-eSF"/>
                         </constraints>
