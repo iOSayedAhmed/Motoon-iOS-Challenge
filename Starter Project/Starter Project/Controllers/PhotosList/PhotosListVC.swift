@@ -12,6 +12,7 @@ class PhotosListVC: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
     // MARK: - Properties
     
     // ViewModel instance
@@ -25,10 +26,34 @@ class PhotosListVC: UIViewController {
         
         configureView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.fetchPhotos()
+    }
+    
+    
+    
 
     //MARK: Methods
     private func configureView(){
+        viewModelBinding()
+    }
+    
+    
+    // Bind view model data to UI elements
+    private  func viewModelBinding(){
         
+        //bind isLoading to handle Loader Animating
+        viewModel.isLoading.bind {[weak self] isLoading in
+            guard let self = self , let isLoading = isLoading else{return}
+            
+            DispatchQueue.main.async {
+                isLoading ? self.activityIndecator.startAnimating() : self.activityIndecator.stopAnimating()
+            }
+            
+        }
     }
 
 }
