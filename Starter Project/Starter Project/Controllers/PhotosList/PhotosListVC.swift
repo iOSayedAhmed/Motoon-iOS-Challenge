@@ -42,6 +42,7 @@ class PhotosListVC: UIViewController {
 
     //MARK: Methods
     private func configureView(){
+        customizeNavigationController()
         setupCollectionView()
         viewModel.fetchPhotos()
         viewModelBinding()
