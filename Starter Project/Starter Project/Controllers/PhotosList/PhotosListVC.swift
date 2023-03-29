@@ -15,6 +15,10 @@ class PhotosListVC: UIViewController {
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
     // MARK: - Properties
     
+    let cellIndintifier = "photoCollectionViewCell"
+    
+    var cellDataSource = [PhotoCellViewModel]()
+    
     // ViewModel instance
     var viewModel:PhotosListsViewModel = PhotosListsViewModel()
     
@@ -30,7 +34,7 @@ class PhotosListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel.fetchPhotos()
+       
     }
     
     
@@ -38,6 +42,8 @@ class PhotosListVC: UIViewController {
 
     //MARK: Methods
     private func configureView(){
+        setupCollectionView()
+        viewModel.fetchPhotos()
         viewModelBinding()
     }
     
@@ -54,6 +60,14 @@ class PhotosListVC: UIViewController {
             }
             
         }
+        
+        // Bind cellDataSource to update collection view
+          viewModel.cellDataSource.bind {[weak self] photos in
+              guard let self = self , let PhotoCellViewModels = photos else{return}
+              print("hjk",PhotoCellViewModels.count)
+              self.cellDataSource = PhotoCellViewModels
+              self.reloadCollectionView()
+          }
     }
 
 }
