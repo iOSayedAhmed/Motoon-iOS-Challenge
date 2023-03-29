@@ -10,4 +10,9 @@ import UIKit
 class photoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
+     func setupCell(viewModel:PhotoCellViewModel) {
+        self.imageView.setImageFromUrl(from: viewModel.thumbUrl)
+    }
 }
