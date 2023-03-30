@@ -71,5 +71,14 @@ class PhotosListVC: UIViewController {
           }
     }
 
+    
+    // Navigate to Full Screen Photo  view .
+   func goToDetailsView(productID:String){
+       guard let photoModel =  viewModel.retivePhoto(with: productID)else{return}
+       let fullScreenPhotoVM = FullScreenPhotoViewModel(PhotosModel: photoModel)
+       let fullScreenPhotoVC = FullScreenPhotoVC(viewModel: fullScreenPhotoVM)
+       fullScreenPhotoVC.modalTransitionStyle = .partialCurl
+       self.navigationController?.pushViewController(fullScreenPhotoVC, animated: true)
+   }
 }
 
