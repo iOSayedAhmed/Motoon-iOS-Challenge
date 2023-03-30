@@ -22,6 +22,9 @@
 		C85B914629D4D627005DB199 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914529D4D627005DB199 /* NetworkConstants.swift */; };
 		C85B914929D4D897005DB199 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914829D4D897005DB199 /* Observable.swift */; };
 		C85B914B29D4E348005DB199 /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B914A29D4E348005DB199 /* UIImageView + Extensions.swift */; };
+		C85B915529D4FA6D005DB199 /* FullScreenPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B915429D4FA6D005DB199 /* FullScreenPhotoViewModel.swift */; };
+		C85B915829D56F65005DB199 /* FullScreenPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B915629D56F65005DB199 /* FullScreenPhotoVC.swift */; };
+		C85B915929D56F65005DB199 /* FullScreenPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C85B915729D56F65005DB199 /* FullScreenPhotoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		C85B914529D4D627005DB199 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		C85B914829D4D897005DB199 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C85B914A29D4E348005DB199 /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
+		C85B915429D4FA6D005DB199 /* FullScreenPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewModel.swift; sourceTree = "<group>"; };
+		C85B915629D56F65005DB199 /* FullScreenPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoVC.swift; sourceTree = "<group>"; };
+		C85B915729D56F65005DB199 /* FullScreenPhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenPhotoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +98,7 @@
 		C80613DF29D42EF700604118 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C80613F329D43EA900604118 /* PhotosListViewModel */,
+				C85B915129D4FA15005DB199 /* ViewControllersViewModel */,
 				C80613F229D43E6900604118 /* ColletionViewCellViewModel */,
 			);
 			path = ViewModels;
@@ -102,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				C80613E829D435C500604118 /* CollectionViewCells */,
+				C85B915629D56F65005DB199 /* FullScreenPhotoVC.swift */,
+				C85B915729D56F65005DB199 /* FullScreenPhotoVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +214,23 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		C85B915129D4FA15005DB199 /* ViewControllersViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C85B915329D4FA4A005DB199 /* FullScreenPhotoViewModel */,
+				C80613F329D43EA900604118 /* PhotosListViewModel */,
+			);
+			path = ViewControllersViewModel;
+			sourceTree = "<group>";
+		};
+		C85B915329D4FA4A005DB199 /* FullScreenPhotoViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C85B915429D4FA6D005DB199 /* FullScreenPhotoViewModel.swift */,
+			);
+			path = FullScreenPhotoViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02948DFA29CFC76E00F82F28 /* LaunchScreen.storyboard in Resources */,
+				C85B915929D56F65005DB199 /* FullScreenPhotoVC.xib in Resources */,
 				02948DF729CFC76E00F82F28 /* Assets.xcassets in Resources */,
 				02948DF529CFC76D00F82F28 /* Main.storyboard in Resources */,
 			);
@@ -283,7 +309,9 @@
 				C80613F529D443C100604118 /* PhotosModel.swift in Sources */,
 				C80613EF29D43BB600604118 /* PhotosListsViewModel.swift in Sources */,
 				C80613F729D4448100604118 /* URLSession + Extensions.swift in Sources */,
+				C85B915529D4FA6D005DB199 /* FullScreenPhotoViewModel.swift in Sources */,
 				C80613EA29D4394800604118 /* photoCollectionViewCell.swift in Sources */,
+				C85B915829D56F65005DB199 /* FullScreenPhotoVC.swift in Sources */,
 				02948DEE29CFC76D00F82F28 /* AppDelegate.swift in Sources */,
 				C80613ED29D43AA800604118 /* PhotosListVC + Extensions.swift in Sources */,
 				C85B914B29D4E348005DB199 /* UIImageView + Extensions.swift in Sources */,
