@@ -11,11 +11,13 @@ class FullScreenPhotoVC: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Properties
-    
+    var doubleTapGestureRecognizer: UITapGestureRecognizer!
     var viewModel:FullScreenPhotoViewModel  // ViewModel instance
+    
     
     
     // MARK: - Initialization
@@ -32,14 +34,24 @@ class FullScreenPhotoVC: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configeView()
     }
     
     // MARK: -  Methods
     
    private func configeView()  {
+       self.title = "Zoom"
+       scrollView.delegate = self
        self.imageView.setImageFromUrl(from: viewModel.regularPhotoUrl)
     }
 
+  
+}
+extension FullScreenPhotoVC:UIScrollViewDelegate {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    
 }
