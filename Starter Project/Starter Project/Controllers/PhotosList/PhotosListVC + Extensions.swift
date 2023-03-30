@@ -60,6 +60,8 @@ extension PhotosListVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     // MARK: - Collection View Delegate
     
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let photoID = cellDataSource[indexPath.item].id
+         self.goToDetailsView(productID:photoID)
         
     }
     
