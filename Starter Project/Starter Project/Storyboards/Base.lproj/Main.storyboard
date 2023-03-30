@@ -87,9 +87,6 @@
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="labelColor"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
