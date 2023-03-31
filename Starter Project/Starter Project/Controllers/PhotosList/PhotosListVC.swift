@@ -63,7 +63,6 @@ class PhotosListVC: UIViewController,UIViewControllerTransitioningDelegate {
         // Bind cellDataSource to update collection view
           viewModel.cellDataSource.bind {[weak self] photos in
               guard let self = self , let PhotoCellViewModels = photos else{return}
-              print("hjk",PhotoCellViewModels.count)
               self.cellDataSource = PhotoCellViewModels
               self.reloadCollectionView()
           }
@@ -75,11 +74,11 @@ class PhotosListVC: UIViewController,UIViewControllerTransitioningDelegate {
        guard let photoModel =  viewModel.retivePhoto(with: productID)else{return}
        let fullScreenPhotoVM = FullScreenPhotoViewModel(PhotosModel: photoModel)
        let fullScreenPhotoVC = FullScreenPhotoVC(viewModel: fullScreenPhotoVM)
-//       fullScreenPhotoVC.transitioningDelegate = zoomAnimator
-//
-//       present(fullScreenPhotoVC, animated: true, completion: nil)
-//      // fullScreenPhotoVC.modalTransitionStyle = .partialCurl
-       self.navigationController?.pushViewController(fullScreenPhotoVC, animated: true)
+       let transition = CATransition()
+       transition.type = .fade
+       transition.duration = 0.5
+       navigationController?.view.layer.add(transition, forKey: kCATransition)
+       navigationController?.pushViewController(fullScreenPhotoVC, animated: false)
    }
 }
 
