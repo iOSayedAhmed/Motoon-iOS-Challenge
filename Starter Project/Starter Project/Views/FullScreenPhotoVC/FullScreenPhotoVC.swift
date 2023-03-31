@@ -14,8 +14,8 @@ class FullScreenPhotoVC: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
+    
     // MARK: - Properties
-    var doubleTapGestureRecognizer: UITapGestureRecognizer!
     var viewModel:FullScreenPhotoViewModel  // ViewModel instance
     
     
