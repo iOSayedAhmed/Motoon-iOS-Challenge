@@ -44,7 +44,7 @@ class FullScreenPhotoVC: UIViewController {
        scrollView.delegate = self
        self.imageView.setImageFromUrl(from: viewModel.regularPhotoUrl)
     }
-
+  
   
 }
 extension FullScreenPhotoVC:UIScrollViewDelegate {
@@ -52,6 +52,5 @@ extension FullScreenPhotoVC:UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
-    
     
 }
