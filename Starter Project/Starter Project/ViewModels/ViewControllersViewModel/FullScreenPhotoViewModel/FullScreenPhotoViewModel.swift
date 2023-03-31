@@ -15,7 +15,6 @@ class FullScreenPhotoViewModel{
     var id:String
     // I'm using regular url insted of full url because full Image have large Size and it will take long time to presented and I don't want use 3rd part like (SDWebImage)
     var regularPhotoUrl:String
-    var thumbUrl:String
     
     
     // MARK: - Initialization
@@ -23,8 +22,6 @@ class FullScreenPhotoViewModel{
     init(PhotosModel:PhotosModel){
         self.id = PhotosModel.id
         self.regularPhotoUrl = PhotosModel.urls.regular
-        self.thumbUrl = PhotosModel.urls.full
-        
     }
     
     
