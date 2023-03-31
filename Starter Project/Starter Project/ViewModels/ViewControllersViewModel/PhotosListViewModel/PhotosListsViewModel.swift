@@ -32,14 +32,13 @@ class PhotosListsViewModel {
         if isLoading.value ?? true {
             return
         }
-        print("fetchPhotos")
         URLSession.shared.request(url:url , expecting: [PhotosModel].self) { [weak self] results in
             self?.isLoading.value = false
             switch results {
             case .success(let data):
+                print(" Fetched Successfully")
                 self?.dataSource = data
                 self?.mapCellData()
-                print(data)
             case .failure(let error):
                 print(error)
             }
