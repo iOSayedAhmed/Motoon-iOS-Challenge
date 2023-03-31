@@ -76,7 +76,7 @@ class PhotosListVC: UIViewController,UIViewControllerTransitioningDelegate {
        let fullScreenPhotoVC = FullScreenPhotoVC(viewModel: fullScreenPhotoVM)
        let transition = CATransition()
        transition.type = .fade
-       transition.duration = 0.5
+       transition.duration = 0.3
        navigationController?.view.layer.add(transition, forKey: kCATransition)
        navigationController?.pushViewController(fullScreenPhotoVC, animated: false)
    }
