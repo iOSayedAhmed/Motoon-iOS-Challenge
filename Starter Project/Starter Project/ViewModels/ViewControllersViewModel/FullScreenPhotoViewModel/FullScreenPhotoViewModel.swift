@@ -24,5 +24,6 @@ class FullScreenPhotoViewModel{
         self.regularPhotoUrl = PhotosModel.urls.regular
     }
     
-    
+  
 }
+
