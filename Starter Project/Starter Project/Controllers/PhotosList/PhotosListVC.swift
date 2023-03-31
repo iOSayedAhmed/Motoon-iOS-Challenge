@@ -7,18 +7,18 @@
 
 import UIKit
 
-class PhotosListVC: UIViewController {
+class PhotosListVC: UIViewController,UIViewControllerTransitioningDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
     // MARK: - Properties
-    
+    let zoomAnimator = ZoomAnimator()
+
     let cellIndintifier = "photoCollectionViewCell"
     
     var cellDataSource = [PhotoCellViewModel]()
-    
     // ViewModel instance
     var viewModel:PhotosListsViewModel = PhotosListsViewModel()
     
@@ -77,7 +77,10 @@ class PhotosListVC: UIViewController {
        guard let photoModel =  viewModel.retivePhoto(with: productID)else{return}
        let fullScreenPhotoVM = FullScreenPhotoViewModel(PhotosModel: photoModel)
        let fullScreenPhotoVC = FullScreenPhotoVC(viewModel: fullScreenPhotoVM)
-       fullScreenPhotoVC.modalTransitionStyle = .partialCurl
+//       fullScreenPhotoVC.transitioningDelegate = zoomAnimator
+//
+//       present(fullScreenPhotoVC, animated: true, completion: nil)
+//      // fullScreenPhotoVC.modalTransitionStyle = .partialCurl
        self.navigationController?.pushViewController(fullScreenPhotoVC, animated: true)
    }
 }
