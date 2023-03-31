@@ -14,8 +14,6 @@ class PhotosListVC: UIViewController,UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
     // MARK: - Properties
-    let zoomAnimator = ZoomAnimator()
-
     let cellIndintifier = "photoCollectionViewCell"
     
     var cellDataSource = [PhotoCellViewModel]()
